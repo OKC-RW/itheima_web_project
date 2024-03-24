@@ -52,6 +52,12 @@ public interface EmpMapper {
             " and entrydate between #{startDate} and #{endDate} order by update_time desc")
     public List<Emp> list(String name, Short gender, LocalDate startDate, LocalDate endDate);*/
 
+    //动态条件查询
     public List<Emp> list(String name, Short gender, LocalDate startDate, LocalDate endDate);
 
+    //动态更新员工
+    public void updateEmp2(Emp emp);
+
+    //批量删除员工
+    public void deleteByIds(List<Integer> ids);
 }
